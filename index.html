@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="./guess.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Guess My Number!</title>
+
+    <!-- Confetti Script for celebration-->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  </head>
+
+  <body>
+    <header role="banner">
+      <!-- Restart Button -->
+      <section>
+        <button type="button" class="btn again">Restart!</button>
+        <p class="number-range">(between 1 and 20)</p>
+      </section>
+      <h1>Guess My Number</h1>
+
+      <!-- Hidden Number -->
+      <section class="secret-number">
+        <p class="hidden-number">?</p>
+      </section>
+    </header>
+
+    <main role="main">
+      <article
+        role="contentinfo"
+        aria-label="Number guessing game input and results"
+        class="main-container"
+      >
+        <!-- Input -->
+        <section
+          role="contentinfo"
+          aria-label="Number guessing game input"
+          class="left"
+        >
+          <input type="number" class="number-input" />
+          <button type="submit" class="btn submit-number">Check!</button>
+        </section>
+
+        <!-- Result -->
+        <section
+          role="contentinfo"
+          aria-label="Number guessing game results"
+          class="right"
+        >
+          <h2 class="message">Start playing...</h2>
+          <p class="label-score">💯 Score: <span class="score">10</span></p>
+          <p class="label-highscore">
+            🏆 Highest Score: <span class="highscore">0</span>
+          </p>
+        </section>
+      </article>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

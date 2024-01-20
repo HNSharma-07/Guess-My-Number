@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-y: scroll;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 1.5rem;
+    color: #eee;
+    background-color: #222;
+}
+
+image {
+    display: block;
+}
+
+ul,
+ol,
+li {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+header section {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+h1 {
+    color: #eee;
+    line-height: 3rem;
+    font-size: 2.5rem;
+}
+
+h2 {
+    line-height: 1.75rem;
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+.again {
+    transition: all ease-out 0.4s;
+}
+
+.secret-number {
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+.hidden-number {
+    background-color: #eee;
+    font-size: 3rem;
+    color: #222;
+    padding: 2.5rem 3rem;
+    text-align: center;
+}
+
+.hidden-number::after {
+    content: "";
+    width: 100%;
+    background-color: #eee;
+    height: 0.5rem;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: -1;
+}
+
+.main-container {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin: 0 auto;
+    margin-top: 15%;
+    margin-bottom: 5%;
+}
+
+.right,
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+.win-message {
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.number-input {
+    background: none;
+    border: 4px solid #eee;
+    font-family: inherit;
+    color: inherit;
+    font-size: 2.5rem;
+    padding: 2rem;
+    width: 10rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    border: none;
+    background-color: #eee;
+    color: #222;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: all ease-out 0.4s;
+}
+
+.label-score {
+    margin-bottom: 1.5rem;
+}
+
+/** Media Query **/
+@media (hover: hover) {
+    .submit-number:hover {
+        background-color: #ccc;
+        transition: all ease-out 0.4s;
+    }
+
+    .again:hover {
+        background-color: #ccc;
+        transition: all ease-out 0.4s;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    header section {
+        flex-direction: row;
+    }
+
+    .main-container {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 5%;
+    }
+
+    .main-container.winner {
+        grid-template-columns: 1fr;
+    }
+}
